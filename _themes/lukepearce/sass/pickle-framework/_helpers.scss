@@ -1,0 +1,165 @@
+
+    .block-margin, %block-margin
+      { margin-bottom: $base-spacing-unit; @include respond(portable) { margin-bottom: $base-spacing-unit/1.5; } }
+
+    .block-margin-half, %block-margin-half
+      { margin-bottom: $base-spacing-unit/2; }
+
+    .block-margin-quarter, %block-margin-quarter
+      { margin-bottom: $base-spacing-unit/4; }
+
+    .block-margin-and-half, %block-margin-and-half
+      { margin-bottom: $base-spacing-unit*1.5; @include respond(portable) { margin-bottom: $base-spacing-unit; } }
+
+    .block-margin-double, %block-margin-double
+      { margin-bottom: $base-spacing-unit*2; @include respond(portable) { margin-bottom: $base-spacing-unit; } }
+
+    .block-margin-treble, %block-margin-treble
+      { margin-bottom: $base-spacing-unit*3; @include respond(portable) { margin-bottom: $base-spacing-unit*2; } }
+
+    // $Helper
+
+    .grid__item--centered,
+    %grid__item--centered
+     {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        }
+
+    .img--full-width,
+    %img--full-width {
+        width: 100%;
+        }
+
+    .img--reflect,
+    %img--reflect {
+        @include vendor(transform, scaleX(-1));
+        filter: FlipH;
+        -ms-filter: "FlipH";
+        }
+
+    .img--rotate,
+    %img--rotate {
+        @include vendor(transform, rotate(180deg));
+        }
+
+    .img--rounded,
+    %img--rounded {
+        @include vendor(border-radius, 100%);
+        }
+
+    .text-left,
+    %text-left {
+        text-align: left;
+        }
+
+    .text-right,
+    %text-right {
+        text-align: right;
+        }
+
+    .text-center,
+    %text-center {
+        text-align: center;
+        }
+
+    .text-center--on-mobile {
+      text-align: center;
+        @include break($lap-start) {
+          text-align: left;
+        }
+      }
+
+    .toggled {
+        display: none;
+        }
+
+    .inline,
+    %inline {
+        display: inline;
+        }
+
+    .block,
+    %block {
+        display: block;
+        }
+
+    .inline-block,
+    %inline-block {
+        display: inline-block;
+        }
+
+    .float-right,
+    %float-right {
+        float: right;
+        }
+
+    .float-left,
+    %float-left {
+        float: left;
+        }
+
+    .no-margin {
+        margin: 0 !important;
+        }
+
+    .no-margin--p p {
+        margin: 0;
+        }
+
+
+    .show-on-mobile {
+        display: none !important;
+            @include respond(portable) {
+                display: block !important;
+                }
+        }
+
+    .hide-on-mobile {
+        display: block !important;
+            @include respond(portable) {
+                display: none !important;
+                }
+            @include respond(desk) {
+            //  display: inline-block;
+                }
+        }
+
+    .show-on-mobile--inline{
+        display: none !important;
+            @include respond(portable) {
+                display: inline-block !important;
+                }
+        }
+
+    .hide-on-mobile--inline {
+        display: inline-block !important;
+            @include respond(portable) {
+                display: none !important;
+                }
+            @include respond(desk) {
+            //  display: inline-block;
+                }
+        }
+
+    .hide-on-palm {
+        display: inline-block !important;
+            @include respond(palm) {
+                display: none !important;
+                }
+            @include respond(desk) {
+            //  display: inline-block;
+                }
+        }
+
+
+    // $Vertical-alignment
+
+
+    .vertical-align-object {
+        @include respond(lap-and-up) {
+            @include vertical-align;
+            }
+        }

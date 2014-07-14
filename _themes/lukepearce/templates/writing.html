@@ -1,0 +1,29 @@
+{{ theme:partial src="sub-nav" }}
+
+{{ entries:listing group_by_date="Y" }}
+  {{ unless no_results }}
+
+    {{ if first }}
+    <div class="typeset">
+    {{ endif }}
+
+    {{ if grouped_date }}
+      <h6>{{ grouped_date }}</h6>
+    {{ endif }}
+
+    <div class="block-margin-half">
+      <h4>
+        <a href="{{ url }}">{{ title|widont }}</a>
+      </h4>
+
+      <div class="article__meta">
+        {{ date format="jS M" }}
+      </div>
+    </div>
+
+    {{ if last }}
+    </div>
+    {{ endif }}
+
+  {{ endif }}
+{{ /entries:listing }}

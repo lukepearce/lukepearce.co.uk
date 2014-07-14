@@ -1,0 +1,199 @@
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+/**
+ * Fluid and nestable grid system, e.g.:
+ *
+   <div class="grid">
+
+       <div class="grid__item  one-third">
+           <p>One third grid</p>
+       </div><!--
+
+    --><div class="grid__item  two-thirds">
+           <p>Two thirds grid</p>
+       </div><!--
+
+    --><div class="grid__item  one-half">
+           <p>One half grid</p>
+       </div><!--
+
+    --><div class="grid__item  one-quarter">
+           <p>One quarter grid</p>
+       </div><!--
+
+    --><div class="grid__item  one-quarter">
+           <p>One quarter grid</p>
+       </div>
+
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/CLYUC
+ *
+ */
+
+
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  *zoom: 1; }
+  .row:before, .row:after {
+    content: " ";
+    display: table; }
+  .row:after {
+    clear: both; }
+  .row.collapse > .column,
+  .row.collapse > .columns {
+    padding-left: 0;
+    padding-right: 0; }
+  .row.collapse .row {
+    margin-left: 0;
+    margin-right: 0; }
+  .row .row {
+    width: auto;
+    margin-left: -0.9375em;
+    margin-right: -0.9375em;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: none;
+    *zoom: 1; }
+    .row .row:before, .row .row:after {
+      content: " ";
+      display: table; }
+    .row .row:after {
+      clear: both; }
+    .row .row.collapse {
+      width: auto;
+      margin: 0;
+      max-width: none;
+      *zoom: 1; }
+      .row .row.collapse:before, .row .row.collapse:after {
+        content: " ";
+        display: table; }
+      .row .row.collapse:after {
+        clear: both; }
+
+.column,
+.columns {
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left; }
+
+
+/**
+ * Grid wrapper
+ */
+.grid{
+    margin-left:-$base-spacing-unit;
+    list-style:none;
+    margin-bottom:0;
+}
+
+
+    /**
+     * Very infrequently occuring grid wrappers as children of grid wrappers.
+     */
+    .grid > .grid{
+        margin-left:0;
+    }
+
+
+  /**
+   * Reversed grids allow you to structure your source in the opposite order to
+   * how your rendered layout will appear. Extends `.grid`.
+   */
+  .grid--rev{
+      direction:rtl;
+      text-align:left;
+
+      > .grid__item{
+          direction:ltr;
+          text-align:left;
+      }
+  }
+
+  /**
+   * Create grids with wider gutters. Extends `.grid`.
+   */
+  .grid--wide{
+      margin-left:-($base-spacing-unit * 2);
+        @include respond(portable) {
+          margin-left:-$base-spacing-unit;
+          }
+
+      > .grid__item{
+          padding-left:$base-spacing-unit * 2;
+            @include respond(portable) {
+              padding-left:$base-spacing-unit;
+              }
+      }
+  }
+
+
+  .grid--thin{
+      margin-left:-($base-spacing-unit / 2);
+        @include respond(portable) {
+          margin-left:-$base-spacing-unit;
+          }
+
+      > .grid__item{
+          padding-left:$base-spacing-unit / 2;
+            @include respond(portable) {
+              padding-left:$base-spacing-unit;
+              }
+      }
+  }
+  
+  /**
+   * Centered grids align grid items centrally without needing to use push or pull
+   * classes. Extends `.grid`.
+   */
+  .grid--center{
+      text-align:center;
+
+      > .grid__item{
+          text-align:left;
+      }
+  }
+
+  /**
+   * Gutterless grids have all the properties of regular grids, minus any spacing.
+   * Extends `.grid`.
+   */
+  .grid--full{
+      margin-left:0;
+
+      > .grid__item{
+          padding-left:0;
+      }
+  }
+
+    /**
+     * Grid
+     */
+    .grid__item{
+        display:inline-block;
+        width:100%;
+        padding-left:$base-spacing-unit;
+        vertical-align:top;
+        }
+
+
+    .half-pad {
+      padding-left:$base-spacing-unit/2;
+        @include respond(portable) {
+          padding-left: $base-spacing-unit;
+          }
+      }
+
+    .double-pad {
+      padding-left:$base-spacing-unit*1.5;
+        @include respond(portable) {
+          padding-left: $base-spacing-unit;
+          }
+      }

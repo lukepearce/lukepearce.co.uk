@@ -1,0 +1,37 @@
+/* -----------
+Writing
+------------ */
+
+  .meta {
+    color: lighten($grey, 20%);
+    font-feature-settings: "smcp" on;
+  }
+
+  .article {
+    @extend .block-margin-treble;
+  }
+
+  .article__heading {
+    @extend .block-margin;
+  }
+
+  .article__title {
+    padding-top: 0 !important;
+  }
+
+  .article__meta {
+    @extend .meta;
+    }
+
+  .quote__body {
+    &:before {
+      content: open-quote;
+      margin-left: -10px;
+    }
+    &:after {
+      content: close-quote;
+    }
+  }
+  .quote__meta {
+    @extend .meta;
+  }

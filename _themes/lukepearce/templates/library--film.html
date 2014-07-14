@@ -1,0 +1,12 @@
+{{ theme:partial src="sub-nav" }}
+
+{{ content }}
+
+{{ entries:listing }}
+  {{ unless no_results }}
+  <div class="block-margin-treble typeset">
+    <h3>{{ title }}</h3>
+    {{ content|widont }}
+  </div>
+  {{ endif }}
+{{ /entries:listing }}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Luke Pearce - Digital Designer &amp; Developer{{ unless !segment_1 }} | {{ if meta_title }}{{ meta_title }}{{ else }}{{ title }}{{ endif }}{{ endif }}</title>
+  {{ if meta_description }}
+  <meta name="description" content="{{ meta_description }}">
+  {{ endif }}
+  <meta name="google-site-verification" content="VT1doqnkq6sE6VK0bs2E0O0CZihEP6QIyOnMHR89OFA" />
+
+  <!-- DNS Prefetch -->
+  <link rel="dns-prefetch" href="//use.typekit.net">
+  <link rel="dns-prefetch" href="//p.typekit.net">
+
+  <!-- Author Info for Google -->
+  <link rel="author" href="https://plus.google.com/+LukePearceDesign">
+  <meta name="author" content="Luke Pearce">
+  <link rel="canonical" href="{{ permalink }}">
+
+  <!-- Facebook Article Info -->
+  <meta property="og:image" content="/assets/img/luke-pearce.jpg">
+  <meta property="og:title" content="Luke Pearce - Digital Designer &amp; Developer{{ unless !segment_1 }} | {{ if meta_title }}{{ meta_title }}{{ else }}{{ title }}{{ endif }}{{ endif }}">
+  <meta property="og:site_name" content="Luke Pearce - Digital Designer &amp; Developer">
+  <meta property="og:url" content="{{ permalink }}">
+  {{ if meta_description }}
+  <meta property="og:description" content="{{ meta_description }}">
+  {{ endif }}
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Info -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@_lukepearce">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for Luke Pearce" href="/atom.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Articles-Only Feed for Luke Pearce" href="/atom.articles.xml" />
+
+  <link rel="stylesheet" href="{{ theme:css src="style.min.css" }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+
+  <script type="text/javascript" src="//use.typekit.net/gyo8mki.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header typeset">
+      <div class="grid">
+        <div class="grid__item palm-one-half lap-and-up-one-half">
+          <p class="site-name">
+            <a href="/">{{ _first_name }}<br>{{ _last_name }}</a>
+          </p>
+        </div><!--
+     --><div class="grid__item palm-one-half lap-and-up-one-half">
+          {{ theme:partial src="nav" }}
+        </div>
+      </div>
+    </header>
+
+    {{ layout_content }}
+
+    <footer class="footer">
+      {{ theme:partial src="footer" }}
+    </footer>
+  </div>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39935291-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>

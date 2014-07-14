@@ -1,0 +1,16 @@
+fields:
+  email:
+    display: Email Address
+  twitter:
+    display: Twitter
+    required: false
+    default: 
+  dribbble:
+    display: Dribbble
+    required: false
+    default: 
+  header_image:
+  	display: Header Image
+  	type: file
+  	allowed: [png, gif, jpg, jpeg]
+  	destination: assets/img/info

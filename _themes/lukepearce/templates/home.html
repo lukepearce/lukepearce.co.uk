@@ -1,0 +1,68 @@
+<h2 class="section-title"><a href="/info">Info</a></h2>
+<div class="typeset">
+  <h1 class="beta block-margin-double">Luke Pearce is a Digital Designer and Developer, helping to take brands to digital platforms.</h1>
+</div>
+
+
+
+<h2 class="section-title"><a href="/work">Work</a></h2>
+
+{{ entries:listing folder="work" limit="1" conditions="header_image, weburl" }}
+  <div class="block-margin-treble typeset">
+
+    {{ if header_image }}
+     <img src="{{ header_image }}">
+    {{ endif }}
+
+    <h4>{{ title }}</h4>
+
+    {{ content }}
+
+    <p><a href="/work">View all</a></p>
+
+   </div>
+{{ /entries:listing }}
+
+
+<h2 class="section-title"><a href="/writing">Writing</a></h2>
+
+{{ entries:listing folder="writing/articles|writing/notes" limit="3" }}
+
+  {{ if first }}
+  <div class="typeset">
+    <h6>Latest</h6>
+  {{ endif }}
+
+    <div class="block-margin-half">
+      <h4>
+        <a href="{{ url }}">{{ title|widont }}</a>
+      </h4>
+
+      <div class="article__meta">
+        {{ date format="jS M" }}
+      </div>
+    </div>
+
+  {{ if last }}
+    <p><a href="/writing">Read all</a></p>
+  </div>
+
+  {{ endif }}
+
+
+
+{{ /entries:listing }}
+
+
+
+<h2 class="section-title"><a href="/library">Library</a></h2>
+
+<article class="article">
+  <div class="grid">
+    {{ entries:listing folder="library/books" limit="3" sort_by="random" }}<!--
+   --><div class="grid__item lap-and-up-one-third">
+        <a href="/library" class="no-hover"><img src="{{ header_image }}" class="image"></a>
+      </div><!--
+ -->{{ /entries:listing }}
+  </div>
+</article>

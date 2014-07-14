@@ -1,0 +1,28 @@
+
+// Colour Helpers
+
+@each $color, $value in $site-colors  {
+ .background--#{$color} {
+   background-color: #{$value};
+ }
+}
+
+@each $color, $value in $site-colors  {
+ .color--#{$color} {
+   color: #{$value};
+ }
+}
+
+/*
+$palettes: (
+    grey: (
+        base:   $light-grey,
+        light:  $lightest-grey,
+        dark:   $grey
+    )
+);
+
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+*/

@@ -1,0 +1,572 @@
+    /*------------------------------------*\
+        $MIXINS
+    \*------------------------------------*/
+
+
+    /**
+     * Style any number of headings in one fell swoop, e.g.:
+     *
+       .foo{
+           @include headings(1, 3){
+               color:#BADA55;
+           }
+        }
+     *
+     * With thanks to @lar_zzz, @paranoida, @rowanmanning and ultimately
+     * @thierrylemoulec for refining and improving my initial mixin.
+     */
+     // -------------------------------------------------------
+     
+    @mixin headings($from: 1, $to: 6){
+        %base-heading {
+            @content
+        }
+
+        @if $from >= 1 and $to <= 6{
+            @for $i from $from through $to{
+                h#{$i}{
+                    @extend %base-heading;
+                }
+            }
+        }
+    }
+
+
+    // SVG backgrounds with PNG fallback
+    // All browsers that support multiple backgrounds also support SVGs. Woohoo!
+    @mixin bg-image-inline($image) {
+      background-image: image-url("#{$image}.png");
+      background-image: inline-image("#{$image}.min.svg"), none;
+    }
+
+    @mixin bg-images($image, $image2, $image3, $image4, $image5) {
+        $png-images: compact(image-url("#{$image}.png"), image-url("#{$image2}.png"), image-url("#{$image3}.png"), image-url("#{$image4}.png"), image-url("#{$image5}.png"));
+        $png-images: compact(image-url("#{$image}.min.svg"), image-url("#{$image2}.min.svg"), image-url("#{$image3}.min.svg"), image-url("#{$image4}.min.svg"), image-url("#{$image5}.min.svg"));
+
+        background: $png-images;
+        background: $svg-images;
+    }
+
+    // Vertical Align
+    %vertical-align {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    @mixin vertical-align {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+
+
+    /**
+     * Create vendor-prefixed CSS in one go, e.g.
+     *
+       `@include vendor(border-radius, 4px);`
+     *
+     */
+     // -------------------------------------------------------
+
+    @mixin vendor($property, $value...){
+        -webkit-#{$property}:$value;
+           -moz-#{$property}:$value;
+            -ms-#{$property}:$value;
+             -o-#{$property}:$value;
+                #{$property}:$value;
+    }
+
+
+    /**
+     * Create CSS keyframe animations for all vendors in one go, e.g.:
+     *
+       .foo{
+           @include vendor(animation, shrink 3s);
+       }
+
+       @include keyframe(shrink){
+           from{
+               font-size:5em;
+           }
+       }
+     *
+     * Courtesy of @integralist: twitter.com/integralist/status/260484115315437569
+     */
+     // -------------------------------------------------------
+
+    @mixin keyframe ($animation-name){
+        @-webkit-keyframes $animation-name{
+            @content;
+        }
+
+        @-moz-keyframes $animation-name{
+            @content;
+        }
+
+        @-ms-keyframes $animation-name{
+            @content;
+        }
+
+        @-o-keyframes $animation-name{
+            @content;
+        }
+
+        @keyframes $animation-name{
+            @content;
+        }
+    }
+
+
+    /**
+     * Force overly long spans of text to truncate, e.g.:
+     *
+       `@include truncate(100%);`
+     *
+     * Where `$truncation-boundary` is a united measurement.
+     */
+    // -------------------------------------------------------
+
+    @mixin truncate($truncation-boundary){
+        max-width:$truncation-boundary;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+
+    /**
+     * CSS arrows!!! But... before you read on, you might want to grab a coffee...
+     *
+     * This mixin creates a CSS arrow on a given element. We can have the arrow
+     * appear in one of 12 locations, thus:
+     *
+     *       01    02    03
+     *    +------------------+
+     * 12 |                  | 04
+     *    |                  |
+     * 11 |                  | 05
+     *    |                  |
+     * 10 |                  | 06
+     *    +------------------+
+     *       09    08    07
+     *
+     * You pass this position in along with a desired arrow color and optional
+     * border color, for example:
+     *
+     * `@include arrow(top, left, red)`
+     *
+     * for just a single, red arrow, or:
+     *
+     * `@include arrow(bottom, center, red, black)`
+     *
+     * which will create a red triangle with a black border which sits at the bottom
+     * center of the element. Call the mixin thus:
+     *
+       .foo{
+           background-color:#BADA55;
+           border:1px solid #ACE;
+           @include arrow(top, left, #BADA55, #ACE);
+       }
+     *
+     */
+
+     // -------------------------------------------------------
+    @mixin arrow($arrow-edge, $arrow-location, $arrow-color, $border-color: $arrow-color){
+
+        @if $arrow-edge == top{
+
+            @extend %arrow--top;
+
+            &:before{
+                border-bottom-color:$border-color!important;
+            }
+
+            &:after{
+                border-bottom-color:$arrow-color!important;
+            }
+
+            @if $arrow-location == left{
+                @extend %arrow--left;
+            }
+
+            @if $arrow-location == center{
+                @extend %arrow--center;
+            }
+
+            @if $arrow-location == right{
+                @extend %arrow--right;
+            }
+
+        }
+
+        @if $arrow-edge == right{
+
+            @extend %arrow--far;
+
+            &:before{
+                border-left-color:$border-color!important;
+            }
+
+            &:after{
+                border-left-color:$arrow-color!important;
+            }
+
+            @if $arrow-location == top{
+                @extend %arrow--upper;
+            }
+
+            @if $arrow-location == center{
+                @extend %arrow--middle;
+            }
+
+            @if $arrow-location == bottom{
+                @extend %arrow--lower;
+            }
+
+        }
+
+        @if $arrow-edge == bottom{
+
+            @extend %arrow--bottom;
+
+            &:before{
+                border-top-color:$border-color!important;
+            }
+
+            &:after{
+                border-top-color:$arrow-color!important;
+            }
+
+            @if $arrow-location == left{
+                @extend %arrow--left;
+            }
+
+            @if $arrow-location == center{
+                @extend %arrow--center;
+            }
+
+            @if $arrow-location == right{
+                @extend %arrow--right;
+            }
+
+        }
+
+        @if $arrow-edge == left{
+
+            @extend %arrow--near;
+
+            &:before{
+                border-right-color:$border-color!important;
+            }
+
+            &:after{
+                border-right-color:$arrow-color!important;
+            }
+
+            @if $arrow-location == top{
+                @extend %arrow--upper;
+            }
+
+            @if $arrow-location == center{
+                @extend %arrow--middle;
+            }
+
+            @if $arrow-location == bottom{
+                @extend %arrow--lower;
+            }
+
+        }
+
+    }
+
+
+    /**
+     * Media query mixin.
+     *
+     * Its not great practice to define solid breakpoints up-front, preferring to
+     * modify your design when it needs it, rather than assuming youll want a
+     * change at mobile. However, as inuit.css is required to take a hands off
+     * approach to design decisions, this is the closest we can get to baked-in
+     * responsiveness. Its flexible enough to allow you to set your own breakpoints
+     * but solid enough to be frameworkified.
+     *
+     * We define some broad breakpoints in our vars file that are picked up here
+     * for use in a simple media query mixin. Our options are:
+     *
+     * palm
+     * lap
+     * lap-and-up
+     * portable
+     * desk
+     * desk-wide
+     *
+     * Not using a media query will, naturally, serve styles to all devices.
+     *
+     * `@include media-query(palm){ [styles here] }`
+     *
+     * We work out your end points for you:
+     */
+
+     // -------------------------------------------------------
+    $palm-end:              $lap-start - 0.06em;
+    $lap-end:               $desk-start - 0.06em;
+
+    @mixin respond($media-query){
+
+        @if $media-query == palm{
+
+            @media only screen and (max-width:$palm-end) { @content; }
+
+        }
+
+        @if $media-query == lap{
+
+            @media only screen and (min-width:$lap-start) and (max-width:$lap-end) { @content; }
+
+        }
+
+        @if $media-query == lap-and-up{
+
+            @media only screen and (min-width:$lap-start) { @content; }
+
+        }
+
+        @if $media-query == portable{
+
+            @media only screen and (max-width:$lap-end) { @content; }
+
+        }
+
+        @if $media-query == desk{
+
+            @media only screen and (min-width:$desk-start) { @content; }
+
+        }
+
+        @if $media-query == desk-wide{
+
+            @media only screen and (min-width: $desk-wide-start) { @content; }
+
+        }
+
+        @if $media-query == high-res{
+
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) { @content; }
+
+        }
+
+    }
+
+    @mixin break($value) {
+
+        @media only screen and (min-width:$value) { @content; }
+
+    }
+
+
+
+
+    // Cross Browser Opacity
+    // -------------------------------------------------------
+
+    @mixin opacity($value) {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value * 100})";
+        opacity: $value; 
+    }
+
+
+    // Sassy Shape Machine Mixin!
+    // http://blog.unakravets.com/post/65995808582/shape-a-sass-mixin
+    // -------------------------------------------------------
+
+    @mixin shape($shape, $size, $color){
+        @if $shape == square {
+            width: $size;
+            height: $size;
+            background-color: $color;
+        }
+        @if $shape == circle {
+            width: $size;
+            height: $size;
+            background-color: $color;
+            border-radius: 50%;
+        }
+        @if $shape == triangle {
+            width: 0;
+            height: 0;
+            border-left: $size solid transparent;
+            border-right: $size solid transparent;
+            border-bottom: $size*1.5 solid $color;
+        }
+        @if $shape == right-triangle {
+            width: 0;
+            height: 0;
+            border-bottom: $size solid $color;
+            border-right: $size solid transparent;
+        }
+        @if $shape == diamond {
+            width: 0;
+            height: 0;
+            border: $size solid transparent;
+            border-bottom-color: $color;
+            position: relative;
+            top: -$size;
+        
+            &:after {
+                content: '';
+                position: absolute;
+                left: -$size;
+                top: $size;
+                width: 0;
+                height: 0;
+                border: $size solid transparent;
+                border-top-color: $color;
+            }
+        }
+        @if $shape == pentagon {
+            position: relative;
+            width: $size;
+            border-width: (25/27)*$size (1/3)*$size 0;
+            border-style: solid;
+            border-color: $color transparent;
+            
+            &:before {
+                content: "";
+                position: absolute;
+                height: 0;
+                width: 0;
+                top: (-17/11)*$size;
+                left: (-1/3)*$size;
+                border-width: 0 (5/6)*$size (35/54)*$size;
+                border-style: solid;
+                border-color: transparent transparent $color;
+            }
+        }
+        @if $shape == hexagon {
+            width: $size*2;
+            height: $size*1.1;
+            background: $color;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: $size/-2;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-left: $size solid transparent;
+                border-right: $size solid transparent;
+                border-bottom: $size/2 solid $color;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: $size/-2;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-left: $size solid transparent;
+                border-right: $size solid transparent;
+                border-top: $size/2 solid $color;
+            }
+        }
+        @if shape == octagon {
+            width: $size;
+            height: $size;
+            background: transparent;
+            position: relative;
+            text-align: center;
+        
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-bottom: 29/$size solid $color;
+                border-left: 29/$size solid transparent;
+                border-right: 29/$size solid transparent;
+                width: 42/$size;
+                height: 0;
+            }
+            
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                border-top: 29/$size solid $color;
+                border-left: 29/$size solid transparent;
+                border-right: 29/$size solid transparent;
+                width: 42/$size;
+                height: 0;
+            }
+        }
+    }
+
+
+
+    // IE styles in main stylesheet
+    // -------------------------------------------------------
+
+    $old-ie: false !default;
+
+    @mixin old-ie {
+        // Only use this content if we're dealing with old IE
+        @if $old-ie {
+            @content;
+        }
+    }
+
+
+
+    // HEX to RGB
+    // http://codepen.io/sturobson/pen/hdKyv
+    // -------------------------------------------------------
+
+    @mixin rgba($color, $value) {
+            background-color: $color;
+            background-color: rgba($color, $value);
+    }
+
+
+    // Advanced typography settings
+    // -------------------------------------------------------
+
+    // Get advanced with type if needed for ligatures etc...
+
+    @mixin advancedtype {
+            //font-variant-ligatures: contextual;                                  // Set the default for ligatures
+            //-moz-font-feature-settings: "liga=1,dlig=1";            // Ligature settings for mozilla
+            font-kerning: normal;                                                                 // Set the default for kerning
+            //-webkit-font-smoothing: antialiased;                                 // Improve (or in some cases royally screw with) safari's legibility somewhat
+            //font-synthesis: none;                                                         // Don't allow the font to create sythetic bold/italic
+            //text-rendering: optimizeLegibility;                                 // Improve kerning pairs. Webkit gets funny with this sometimes
+    }
+
+
+
+    // Retina Images
+    // -------------------------------------------------------
+
+    @mixin image-2x($image, $width, $height) {
+      @media (min--moz-device-pixel-ratio: 1.3),
+             (-o-min-device-pixel-ratio: 2.6/2),
+             (-webkit-min-device-pixel-ratio: 1.3),
+             (min-device-pixel-ratio: 1.3),
+             (min-resolution: 1.3dppx) {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url($image);
+        background-size: $width $height;
+      }
+    }
+

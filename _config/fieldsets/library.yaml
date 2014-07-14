@@ -1,0 +1,14 @@
+fields:
+  categories:
+    display: Categories
+    required: false
+    default: 
+    type: tags
+  weburl:
+  header_image:
+  	display: Header Image
+  	type: file
+  	allowed: [png, gif, jpg, jpeg]
+  	destination: assets/img/library
+
+hide: true

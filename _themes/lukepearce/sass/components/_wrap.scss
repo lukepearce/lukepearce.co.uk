@@ -1,0 +1,57 @@
+/* -----------
+Wrap
+------------ */
+
+  .wrap,
+  %wrap {
+    padding-top: 1em;
+    padding-bottom: 1em;
+      @include break($lap-start) {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+      }
+      @include break($desk-start) {
+        padding-top: 2em;
+        padding-bottom: 2em;
+      }
+    }
+
+  .wrap--med,
+  %wrap--med {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  .wrap--half,
+  %wrap--half {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .wrap--double,
+  %wrap--double {
+    padding-top: 4em;
+    padding-bottom: 4em;
+      @include respond(lap) {
+        padding-top: 3em;
+        padding-bottom: 3em;
+        }
+      @include respond(palm) {
+        padding-top: 2em;
+        padding-bottom: 2em;
+        }
+    }
+
+  .wrap--xl,
+  %wrap--xl {
+    padding-top: 8em;
+    padding-bottom: 8em;
+      @include respond(lap) {
+        padding-top: 3em;
+        padding-bottom: 3em;
+        }
+      @include respond(palm) {
+        padding-top: 2em;
+        padding-bottom: 2em;
+        }
+    }

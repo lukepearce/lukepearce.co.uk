@@ -1,0 +1,43 @@
+/* -----------
+Lists
+------------ */
+
+  .unstyled-list {
+    list-style: none;
+      a {
+        display: inline-block;
+        }
+    }
+
+  .unstyled-list--vertical li {
+    display: block;
+    }
+
+  .unstyled-list--horizontal li {
+    display: inline-block;
+    }
+
+  .spaced-list li {
+    margin-right: 1.2em;
+      &:last-child {
+        margin-right: 0;
+      }
+  }
+
+  .bullet-list {
+    list-style: disc;
+    }
+
+  .pipe-spaced-list li {
+    margin-right: 1.2em;
+      &:after {
+        content: "|";
+        padding-left: 1.5em;
+      }
+      &:last-child {
+        margin-right: 0;
+          &:after {
+            content: none;
+          }
+      }
+  }

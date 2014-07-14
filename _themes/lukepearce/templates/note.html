@@ -1,0 +1,24 @@
+<div class="typeset block-margin-treble">
+
+   <div class="article-heading block-margin">
+
+     <div class="article__meta">
+       {{ date format="jS M Y" }}
+     </div>
+
+     <h2 class="article__title">
+       {{ if external_link }}
+         <a href="{{ external_link }}">{{ endif }}{{ title|widont }}{{ if external_link }}&nbsp;&#8594;</a>
+       {{ endif }}
+     </h2>
+
+   </div>
+
+     <!--
+     {{ if categories }}
+     <p>Services provided {{ categories_url_list }}.</p>
+     {{ endif }}
+     -->
+
+  {{ content|widont }}
+</div>

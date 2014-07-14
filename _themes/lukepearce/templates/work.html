@@ -1,0 +1,23 @@
+
+
+{{ entries:listing folder="work" sort_dir="asc" }}
+ <div class="block-margin-treble typeset">
+
+  {{ if header_image }}
+  <img src="{{ header_image }}">
+  {{ endif }}
+
+  <h4>{{ title }}</h4>
+
+  {{ content|widont }}
+
+  {{ if weburl }}
+  <p>
+    <a href="http://www.{{ weburl }}" target="_blank" class="url-link">{{ weburl }}</a>
+  </p>
+  {{ endif }}
+
+  </div>
+{{ /entries:listing }}
+
+{{ content }}

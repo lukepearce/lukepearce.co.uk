@@ -1,0 +1,34 @@
+/* -----------
+Headings
+------------ */
+
+  .header a {
+    background: none;
+  }
+
+  .site-name {
+    font-family: $futura;
+    text-align: right;
+    font-size: 1.5em;
+    line-height: 1.1em;
+    color: $primary;
+      a {
+        text-shadow: none !important;
+        background: none !important;
+      }
+    }
+
+  .section-title {
+    font-family: $futura;
+    font-size: 1.2em;
+    text-align: center;
+    padding-bottom: .5em;
+    margin-top: 2em;
+    color: $primary;
+      &:before{
+          content:"— ";
+          }
+        &:after{
+          content:" —";
+          }
+    }

@@ -1,0 +1,23 @@
+{{ theme:partial src="sub-nav" }}
+
+{{ content }}
+
+{{ entries:listing }}
+  {{ unless no_results }}
+   <div class="block-margin-treble typeset">
+
+   	  <div class="grid grid--wide">
+        <div class="grid__item palm-one-quarter lap-and-up-one-third">
+          <img src="{{ header_image }}" class="library-image">
+        </div><!--
+
+     --><div class="grid__item palm-three-quarters lap-and-up-two-thirds">
+          <h4>{{ title }}</h4>
+          {{ content|widont }}
+          <p><a href="http://www.{{ weburl }}" class="url-link">{{ weburl }}</a></p>
+        </div>
+      </div>
+
+    </div>
+  {{ endif }}
+{{ /entries:listing }}

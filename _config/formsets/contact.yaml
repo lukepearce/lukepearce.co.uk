@@ -1,0 +1,74 @@
+###########################################################################################
+#
+#  EXAMPLE RAVEN FORMSET
+#
+#  Formsets can override any default settings (raven.yaml) EXCEPT master_killswitch
+#
+###########################################################################################
+
+# Location (from root) to save form submissions
+submission_save_path: _forms/
+
+# Prefix your files with a string which are saved in the format:
+# YYYY-MM-DD-HH-MM-SS.yaml
+# file_prefix: contact
+
+# Prefix your files with a string which are saved in the format:
+# YYYY-MM-DD-HH-MM-SS.yaml
+file_suffix: -contact
+
+submission_save_extension: md
+
+# Fields allowed to be submitted in the form, automatically
+# purging anything and everything else
+allowed:
+  - full_name
+  - telephone
+  - email
+  - message
+  - question
+
+# You are not required to require fields, but once you do, any missing
+# from the POST will squash this submission and send a list of
+# missing fields to your {{ raven:errors }} tagpair
+required:
+  - full_name
+  - telephone
+  - email
+  - message
+  - question
+
+# Apply validation rules to specific fields. Refer to documentation
+# for a full list of available rules and their format
+validate:
+  full_name: alpha
+  question:
+    equals: 4
+  email: email
+  telephone: alnum
+
+
+
+# Error messages can be mapped to your fields and passed to the
+# template upon failure. They will be available here:
+#
+# {{ raven:error }}
+#     {{ invalid }}
+#         {{ field }} : {{ message }}
+#     {{ /invalid }}
+# {{ /raven:error }}
+#
+messages:
+  full_name: "Your name has to have letters in it."
+  question: "We're testing you're human so answer the question please."
+  email: "Doesn't look this thats a valid email address, sorry."
+  telephone: "Doesn't look this thats a valid telphone number, sorry."
+
+# Configure notification email
+email:
+  to: email@domain.com
+  from: forms@domain.com
+  subject: New enquiry received on the website
+  automagic: true
+  # html_template: html_email
+  # text_template: text_email

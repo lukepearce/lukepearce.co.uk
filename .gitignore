@@ -1,0 +1,17 @@
+.DS_Store
+.rev
+_cache
+_logs
+.sass-cache/**
+node_modules
+.log
+
+# Copyright protected files for Statamic
+_app
+admin
+_add-ons/raven
+_add-ons/bloodhound
+
+# Private stuff
+_forms
+dploy.yaml

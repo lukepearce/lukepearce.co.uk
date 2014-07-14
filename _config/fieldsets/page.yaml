@@ -1,0 +1,16 @@
+title: Standard Page
+
+fields:
+  _template:
+    display: Template
+    type:templates
+
+  title:
+    default: Default Value
+    instructions: These are instructions.
+
+  content:
+    display: Page Content
+    required: false
+    default:
+    type: markitup

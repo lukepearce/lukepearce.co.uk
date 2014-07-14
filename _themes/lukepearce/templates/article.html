@@ -1,0 +1,31 @@
+<div class="typeset">
+  <article class="article">
+
+     <div class="article__heading">
+
+       <div class="article__meta">
+         {{ date format="jS M Y" }}
+       </div>
+
+       <h2 class="article__title">
+         {{ if external_link }}
+           <a href="{{ external_link }}">{{ endif }}{{ title|widont }}{{ if external_link }}&nbsp;&#8594;</a>
+         {{ endif }}
+       </h2>
+
+     </div>
+
+    {{ content|widont }}
+  </article>
+
+  <hr>
+
+  {{ entries:next folder="writing/articles" wrap="true" }}
+      {{ if !no_results }}
+        <h5>Next up:</h5>
+        <p>
+          <a href="{{ url }}">{{ title }}&nbsp;&#8594;</a>
+        </p>
+      {{ endif }}
+  {{ /entries:next }}
+</div>

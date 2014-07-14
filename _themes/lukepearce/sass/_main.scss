@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+	/*------------------------------------*\
+	    MAIN.SCSS
+	\*------------------------------------*/
+	/**
+	 * This is where we import all our SASS files from the happy framework and the inuit grid system
+	 *
+	 * Gruntfile.js watches and compiles all SASS to expanded format when in development environment
+	 * cd into working directory and run 'grunt'
+	 *
+	 * For production compilation to compressed format run 'grunt release'
+	 *
+	 */
+
+	/*------------------------------------*\
+	  Imports
+	\*------------------------------------*/
+	@import "pickle-framework/fonts";
+	@import "pickle-framework/variables";
+	@import "pickle-framework/color-helpers";
+
+//@import "pickle-framework/reset";
+	@import "pickle-framework/mixins";
+//@import "pickle-framework/symbolset";
+//@import "pickle-framework/forms";
+//@import "pickle-framework/animate";
+//@import "pickle-framework/typography";
+	@import "pickle-framework/helpers";
+//@import "pickle-framework/slider";
+
+	@import "sassline/style";
+
+	@import "components/nav";
+	@import "components/headings";
+	@import "components/footer";
+	@import "components/writing";
+//@import "components/island";
+//@import "components/lists";
+//@import "components/wrap";
+
+//Borrowed from the inuit.css framework by Harry Roberts
+//@import "inuit-grid/csswizardry-grids";
+	@import "inuit-grid/grids";
+	@import "inuit-grid/widths";
+
+
+	/*------------------------------------*\
+	  $Base
+	\*------------------------------------*/
+
+
+		* {
+			@include vendor(text-rendering, optimizeLegibility);
+		  @include vendor(font-smoothing, antialiased);
+			zoom: 1;
+			}
+
+		html {
+	    overflow-y:scroll;
+	    min-height:100%;
+			}
+
+		body {
+			font-size: $base-font-size;
+		  font-size: #{($base-font-size/16px)*1em};
+		  font-family: $base-font-family;
+		  font-weight: $base-font-weight;
+		  line-height: 1.6;
+		  color: $body-color;
+		  background: #fafafa;
+	    min-height: 100%;
+	//  	overflow: hidden;
+	  	position: relative;
+			}
+
+		.container {
+			max-width: 37em;
+			margin: 0 auto;
+			padding: 0 30px;
+			padding: 0 2em;
+
+				@include respond(palm) {
+					padding: 0 15px;
+					padding: 0 1em;
+					}
+				@include respond(lap) {
+					padding: 0 45px;
+					padding: 0 3em;
+					}
+			}
+
+		.container--wide {
+			max-width: 70em;
+			}
+
+		.container--widest {
+			max-width: 75em;
+				@include respond(portable) {
+					padding-left: 1em;
+					padding-right: 1em;
+					}
+			}
+
+		.container--thin {
+			max-width: 47em;
+			}
+
+		.container--to-edge {
+			padding: 0;
+		}
+
+		.container--to-edge__mobile {
+				@include respond(palm) {
+					padding: 0;
+				}
+				@include respond(lap) {
+					padding: 1em;
+				}
+		}
+
+		video {
+			max-width: 100%;
+			width: 100%;
+			height: auto;
+			}
+
+		img {
+			border: none;
+			max-width: 100%;
+			vertical-align: middle;
+				@include break($lap-start) {
+					margin-bottom: $base-spacing-unit/2;
+				}
+				@include break($desk-start) {
+					margin-bottom: $base-spacing-unit;
+				}
+			}
+		
+		.header {
+			margin-bottom: 3em;
+			padding-bottom: 1em;
+			padding-top: 2em;
+			border-bottom: .2em solid $primary;
+			}

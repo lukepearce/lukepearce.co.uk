@@ -1,0 +1,56 @@
+    // $Variables
+    // Imported first so we can use them in partials
+
+    $base-font-size:    19px!default;
+    $base-line-height:  24px!default;
+    $base-font-weight:  normal;
+
+    $base-spacing-unit:     $base-line-height!default;
+    $half-spacing-unit:     $base-spacing-unit / 2!default;
+    $double-spacing-unit:   $base-spacing-unit * 2!default;
+    $line-height-ratio:     $base-line-height / $base-font-size;
+
+    $lap-start:         35em!default;
+    $desk-start:        50em!default;
+    $desk-wide-start:   75em!default;
+
+
+    // $Colours
+
+    $site-colors: (
+      light-grey: #E6E6E6,
+      lightest-grey: #F7F7F7,
+
+      primary: #4facd1,
+      grey: #6f6f6f,
+      dark-grey: #444444
+    );
+
+    $light-grey: #E6E6E6;
+    $lightest-grey: #F7F7F7;
+
+    $primary: #4facd1;
+    $grey: #6f6f6f;
+    $dark-grey: #444444;
+
+    $body-color: $grey;
+    $button-background-color: $primary;
+    $button-text-color: #fff;
+
+    //$Fonts
+
+    $calluna: "calluna", Georgia;
+    $futura: "futura-pt";
+    $proxima: "proxima-nova";
+
+    $news: "leitura-news";
+    $sol: "soleil";
+    $tisa: "ff-tisa-web-pro";
+    $rooney: "rooney-web";
+
+    // $Headings and Fonts
+    $default-font-stack: Helvetica Nue, Helvetica, Arial, sans-serif;
+    $base-font-family: $news, $default-font-stack;
+    $heading-font-family: $news, $default-font-stack;
+    $heading-font-weight: inherit;
+    $heading-font-color: $dark-grey;

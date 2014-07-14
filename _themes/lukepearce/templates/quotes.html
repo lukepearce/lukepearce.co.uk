@@ -1,0 +1,28 @@
+{{ theme:partial src="sub-nav" }}
+
+{{ entries:listing group_by_date="Y" }}
+  {{ unless no_results }}
+
+    {{ if first }}
+    <div class="typeset">
+    {{ endif }}
+
+    {{ if grouped_date }}
+      <h6>{{ grouped_date }}</h6>
+    {{ endif }}
+
+    <div class="block-margin-and-half">
+      <h5 class="quote__body no-margin">{{ content|striptags|widont }}</h5>
+
+      <div class="text-right quote__meta">
+        &#8212; {{ title|widont }}
+      </div>
+
+    </div>
+
+    {{ if last }}
+    </div>
+    {{ endif }}
+
+  {{ endif }}
+{{ /entries:listing }}

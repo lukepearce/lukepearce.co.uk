@@ -1,0 +1,12 @@
+<div class="typeset">
+  <header>
+    {{ if header_image }}
+    <img src="{{ header_image }}" class="block-margin">
+    {{ endif }}
+  </header>
+
+  <h2>{{ title }}</h2>
+  {{ content|widont }}
+</div>
+
+<div>
