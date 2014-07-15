@@ -24,6 +24,7 @@ Headings
     text-align: center;
     padding-bottom: .5em;
     margin-top: 2em;
+    @extend .block-margin-half;
     color: $primary;
       &:before{
           content:"— ";

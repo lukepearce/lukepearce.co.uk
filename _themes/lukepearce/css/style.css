@@ -222,7 +222,8 @@ $palettes: (
 
 /* line 5, ../sass/pickle-framework/_helpers.scss */
 
-.block-margin-half {
+.block-margin-half,
+.section-title {
   margin-bottom: 12px;
 }
 
@@ -248,14 +249,16 @@ $palettes: (
 
 /* line 14, ../sass/pickle-framework/_helpers.scss */
 
-.block-margin-double {
+.block-margin-double,
+.header {
   margin-bottom: 48px;
 }
 
 @media only screen and (max-width: 49.94em) {
   /* line 14, ../sass/pickle-framework/_helpers.scss */
 
-  .block-margin-double {
+  .block-margin-double,
+  .header {
     margin-bottom: 24px;
   }
 }
@@ -1274,13 +1277,13 @@ a.current {
 /* line 109, ../sass/sassline/base/_typography.scss */
 
 .typeset ul {
-  margin-left: 1em;
+  margin-left: 1.1em;
 }
 
 /* line 110, ../sass/sassline/base/_typography.scss */
 
 .typeset ol {
-  margin-left: 1.3em;
+  margin-left: 1.4em;
 }
 
 /* line 113, ../sass/sassline/base/_typography.scss */
@@ -1350,20 +1353,9 @@ a.current {
   -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  margin-left: 36px;
-  margin-left: 2rem;
 }
 
-@media screen and (min-width: 40em) {
-  /* line 116, ../sass/sassline/base/_typography.scss */
-
-  .typeset ul li,
-  .typeset ol li {
-    margin-left: 0;
-  }
-}
-
-/* line 131, ../sass/sassline/base/_typography.scss */
+/* line 126, ../sass/sassline/base/_typography.scss */
 
 .typeset b,
 .typeset strong,
@@ -1371,7 +1363,7 @@ a.current {
   font-weight: 700;
 }
 
-/* line 136, ../sass/sassline/base/_typography.scss */
+/* line 131, ../sass/sassline/base/_typography.scss */
 
 .typeset em,
 .typeset i,
@@ -1379,7 +1371,7 @@ a.current {
   font-style: italic;
 }
 
-/* line 141, ../sass/sassline/base/_typography.scss */
+/* line 136, ../sass/sassline/base/_typography.scss */
 
 .typeset small,
 .typeset .caption {
@@ -1391,7 +1383,7 @@ a.current {
 }
 
 @media screen and (min-width: 40em) {
-  /* line 141, ../sass/sassline/base/_typography.scss */
+  /* line 136, ../sass/sassline/base/_typography.scss */
 
   .typeset small,
   .typeset .caption {
@@ -1401,7 +1393,7 @@ a.current {
 }
 
 @media screen and (min-width: 50em) {
-  /* line 141, ../sass/sassline/base/_typography.scss */
+  /* line 136, ../sass/sassline/base/_typography.scss */
 
   .typeset small,
   .typeset .caption {
@@ -1411,7 +1403,7 @@ a.current {
 }
 
 @media screen and (min-width: 64em) {
-  /* line 141, ../sass/sassline/base/_typography.scss */
+  /* line 136, ../sass/sassline/base/_typography.scss */
 
   .typeset small,
   .typeset .caption {
@@ -1421,7 +1413,7 @@ a.current {
 }
 
 @media screen and (min-width: 100em) {
-  /* line 141, ../sass/sassline/base/_typography.scss */
+  /* line 136, ../sass/sassline/base/_typography.scss */
 
   .typeset small,
   .typeset .caption {
@@ -1430,14 +1422,14 @@ a.current {
   }
 }
 
-/* line 148, ../sass/sassline/base/_typography.scss */
+/* line 143, ../sass/sassline/base/_typography.scss */
 
 .typeset small {
   line-height: 18px;
   line-height: 1rem;
 }
 
-/* line 152, ../sass/sassline/base/_typography.scss */
+/* line 147, ../sass/sassline/base/_typography.scss */
 
 .typeset .caption {
   color: #7e7e7e;
@@ -1448,7 +1440,7 @@ a.current {
 }
 
 @media screen and (min-width: 40em) {
-  /* line 152, ../sass/sassline/base/_typography.scss */
+  /* line 147, ../sass/sassline/base/_typography.scss */
 
   .typeset .caption {
     margin-bottom: 23.7px;
@@ -1459,7 +1451,7 @@ a.current {
 }
 
 @media screen and (min-width: 50em) {
-  /* line 152, ../sass/sassline/base/_typography.scss */
+  /* line 147, ../sass/sassline/base/_typography.scss */
 
   .typeset .caption {
     margin-bottom: 23.6px;
@@ -1470,7 +1462,7 @@ a.current {
 }
 
 @media screen and (min-width: 64em) {
-  /* line 152, ../sass/sassline/base/_typography.scss */
+  /* line 147, ../sass/sassline/base/_typography.scss */
 
   .typeset .caption {
     margin-bottom: 23.2px;
@@ -1481,7 +1473,7 @@ a.current {
 }
 
 @media screen and (min-width: 100em) {
-  /* line 152, ../sass/sassline/base/_typography.scss */
+  /* line 147, ../sass/sassline/base/_typography.scss */
 
   .typeset .caption {
     margin-bottom: 23.1px;
@@ -1491,7 +1483,7 @@ a.current {
   }
 }
 
-/* line 158, ../sass/sassline/base/_typography.scss */
+/* line 153, ../sass/sassline/base/_typography.scss */
 
 .typeset h1 + .caption,
 .typeset .alpha + .caption,
@@ -1503,7 +1495,7 @@ a.current {
   margin-top: -1rem;
 }
 
-/* line 165, ../sass/sassline/base/_typography.scss */
+/* line 160, ../sass/sassline/base/_typography.scss */
 
 .typeset blockquote p {
   font-style: italic;
@@ -1518,7 +1510,7 @@ a.current {
 }
 
 @media screen and (min-width: 40em) {
-  /* line 165, ../sass/sassline/base/_typography.scss */
+  /* line 160, ../sass/sassline/base/_typography.scss */
 
   .typeset blockquote p {
     margin-bottom: 32.4px;
@@ -1529,7 +1521,7 @@ a.current {
 }
 
 @media screen and (min-width: 50em) {
-  /* line 165, ../sass/sassline/base/_typography.scss */
+  /* line 160, ../sass/sassline/base/_typography.scss */
 
   .typeset blockquote p {
     margin-bottom: 32.3px;
@@ -1540,7 +1532,7 @@ a.current {
 }
 
 @media screen and (min-width: 64em) {
-  /* line 165, ../sass/sassline/base/_typography.scss */
+  /* line 160, ../sass/sassline/base/_typography.scss */
 
   .typeset blockquote p {
     margin-bottom: 32px;
@@ -1551,7 +1543,7 @@ a.current {
 }
 
 @media screen and (min-width: 100em) {
-  /* line 165, ../sass/sassline/base/_typography.scss */
+  /* line 160, ../sass/sassline/base/_typography.scss */
 
   .typeset blockquote p {
     margin-bottom: 32.5px;
@@ -1562,7 +1554,7 @@ a.current {
 }
 
 @media screen and (min-width: 40em) {
-  /* line 163, ../sass/sassline/base/_typography.scss */
+  /* line 158, ../sass/sassline/base/_typography.scss */
 
   .typeset blockquote {
     margin-left: -18px;
@@ -1570,7 +1562,7 @@ a.current {
   }
 }
 
-/* line 200, ../sass/sassline/base/_typography.scss */
+/* line 195, ../sass/sassline/base/_typography.scss */
 
 .typeset hr {
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#c9c9c9));
@@ -1587,7 +1579,7 @@ a.current {
   margin: 0;
 }
 
-/* line 214, ../sass/sassline/base/_typography.scss */
+/* line 209, ../sass/sassline/base/_typography.scss */
 
 .typeset code,
 .typeset pre {
@@ -1596,7 +1588,7 @@ a.current {
   font-family: Menlo, monospace;
 }
 
-/* line 220, ../sass/sassline/base/_typography.scss */
+/* line 215, ../sass/sassline/base/_typography.scss */
 
 .typeset pre {
   border-radius: 5.4px;
@@ -1612,7 +1604,7 @@ a.current {
   padding: 1rem;
 }
 
-/* line 231, ../sass/sassline/base/_typography.scss */
+/* line 226, ../sass/sassline/base/_typography.scss */
 
 .typeset code {
   font-size: 19.2px;
@@ -1622,7 +1614,7 @@ a.current {
 }
 
 @media screen and (min-width: 40em) {
-  /* line 231, ../sass/sassline/base/_typography.scss */
+  /* line 226, ../sass/sassline/base/_typography.scss */
 
   .typeset code {
     font-size: 17.5px;
@@ -1631,7 +1623,7 @@ a.current {
 }
 
 @media screen and (min-width: 50em) {
-  /* line 231, ../sass/sassline/base/_typography.scss */
+  /* line 226, ../sass/sassline/base/_typography.scss */
 
   .typeset code {
     font-size: 17.3px;
@@ -1640,7 +1632,7 @@ a.current {
 }
 
 @media screen and (min-width: 64em) {
-  /* line 231, ../sass/sassline/base/_typography.scss */
+  /* line 226, ../sass/sassline/base/_typography.scss */
 
   .typeset code {
     font-size: 15.9px;
@@ -1649,7 +1641,7 @@ a.current {
 }
 
 @media screen and (min-width: 100em) {
-  /* line 231, ../sass/sassline/base/_typography.scss */
+  /* line 226, ../sass/sassline/base/_typography.scss */
 
   .typeset code {
     font-size: 15.6px;
@@ -1657,7 +1649,7 @@ a.current {
   }
 }
 
-/* line 237, ../sass/sassline/base/_typography.scss */
+/* line 232, ../sass/sassline/base/_typography.scss */
 
 .typeset .upper {
   text-transform: uppercase;
@@ -1665,7 +1657,7 @@ a.current {
   letter-spacing: 0.1rem;
 }
 
-/* line 243, ../sass/sassline/base/_typography.scss */
+/* line 238, ../sass/sassline/base/_typography.scss */
 
 .typeset .small-caps {
   -webkit-font-feature-settings: 'smcp' 1, 'kern' 1;
@@ -1677,7 +1669,7 @@ a.current {
   letter-spacing: 0.1rem;
 }
 
-/* line 253, ../sass/sassline/base/_typography.scss */
+/* line 248, ../sass/sassline/base/_typography.scss */
 
 .typeset .lining-numerals {
   -webkit-font-feature-settings: 'lnum' 1, 'kern' 1;
@@ -1687,7 +1679,7 @@ a.current {
   font-feature-settings: 'lnum' 1, 'kern' 1;
 }
 
-/* line 262, ../sass/sassline/base/_typography.scss */
+/* line 257, ../sass/sassline/base/_typography.scss */
 
 .typeset .oldstyle-numerals {
   -webkit-font-feature-settings: 'onum' 1, 'kern' 1;
@@ -1722,22 +1714,23 @@ Nav
 
 .main-nav {
   line-height: 1.75em;
+  margin-left: 0 !important;
 }
 
-/* line 11, ../sass/components/_nav.scss */
+/* line 12, ../sass/components/_nav.scss */
 
 .main-nav li {
   display: block;
 }
 
-/* line 16, ../sass/components/_nav.scss */
+/* line 17, ../sass/components/_nav.scss */
 
 .nav--sub {
   text-align: center;
   margin-bottom: 2em;
 }
 
-/* line 19, ../sass/components/_nav.scss */
+/* line 20, ../sass/components/_nav.scss */
 
 .nav--sub li {
   display: inline-block;
@@ -1784,13 +1777,13 @@ Headings
   color: #4facd1;
 }
 
-/* line 28, ../sass/components/_headings.scss */
+/* line 29, ../sass/components/_headings.scss */
 
 .section-title:before {
   content: "— ";
 }
 
-/* line 31, ../sass/components/_headings.scss */
+/* line 32, ../sass/components/_headings.scss */
 
 .section-title:after {
   content: " —";
@@ -1830,14 +1823,20 @@ Writing
   padding-top: 0 !important;
 }
 
-/* line 27, ../sass/components/_writing.scss */
+/* line 22, ../sass/components/_writing.scss */
+
+.article__meta {
+  padding-top: 0.25em;
+}
+
+/* line 28, ../sass/components/_writing.scss */
 
 .quote__body:before {
   content: open-quote;
   margin-left: -10px;
 }
 
-/* line 31, ../sass/components/_writing.scss */
+/* line 32, ../sass/components/_writing.scss */
 
 .quote__body:after {
   content: close-quote;
@@ -3434,11 +3433,6 @@ html {
 /* line 64, ../sass/_main.scss */
 
 body {
-  font-size: 19px;
-  font-size: 1.1875em;
-  font-family: "leitura-news", Helvetica Nue, Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  line-height: 1.6;
   color: #6f6f6f;
   background: #fafafa;
   min-height: 100%;
@@ -3556,7 +3550,6 @@ img {
 /* line 140, ../sass/_main.scss */
 
 .header {
-  margin-bottom: 3em;
   padding-bottom: 1em;
   padding-top: 2em;
   border-bottom: 0.2em solid #4facd1;

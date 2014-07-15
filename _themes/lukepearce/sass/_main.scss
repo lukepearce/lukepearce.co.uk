@@ -62,11 +62,11 @@
 			}
 
 		body {
-			font-size: $base-font-size;
-		  font-size: #{($base-font-size/16px)*1em};
-		  font-family: $base-font-family;
-		  font-weight: $base-font-weight;
-		  line-height: 1.6;
+			// font-size: $base-font-size;
+		  // font-size: #{($base-font-size/16px)*1em};
+		  // font-family: $base-font-family;
+		  // font-weight: $base-font-weight;
+		  // line-height: 1.6;
 		  color: $body-color;
 		  background: #fafafa;
 	    min-height: 100%;
@@ -136,9 +136,9 @@
 					margin-bottom: $base-spacing-unit;
 				}
 			}
-		
+
 		.header {
-			margin-bottom: 3em;
+			@extend .block-margin-double;
 			padding-bottom: 1em;
 			padding-top: 2em;
 			border-bottom: .2em solid $primary;
