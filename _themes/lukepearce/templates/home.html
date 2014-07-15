@@ -1,5 +1,5 @@
 <h2 class="section-title"><a href="/info">Info</a></h2>
-<div class="typeset">
+<div class="typeset block-margin-treble">
   <h1 class="beta block-margin-double">Luke Pearce is a Digital Designer and Developer, helping to take brands to digital platforms.</h1>
 </div>
 
@@ -11,7 +11,7 @@
   <div class="block-margin-treble typeset">
 
     {{ if header_image }}
-     <img src="{{ header_image }}">
+     <p><img src="{{ header_image }}"></p>
     {{ endif }}
 
     <h4>{{ title }}</h4>
@@ -30,7 +30,9 @@
 
   {{ if first }}
   <div class="typeset">
-    <h6>Latest</h6>
+    <div class="block-margin-half">
+      <h6>Latest</h6>
+    </div>
   {{ endif }}
 
     <div class="block-margin-half">
@@ -59,7 +61,7 @@
 
 <article class="article">
   <div class="grid">
-    {{ entries:listing folder="library/books" limit="3" sort_by="random" }}<!--
+    {{ entries:listing folder="library/books" limit="3" }}<!--
    --><div class="grid__item lap-and-up-one-third">
         <a href="/library" class="no-hover"><img src="{{ header_image }}" class="image"></a>
       </div><!--

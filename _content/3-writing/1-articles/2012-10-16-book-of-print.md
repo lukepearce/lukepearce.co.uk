@@ -18,6 +18,8 @@ I hope this book can be a piece of art in itself, something that will last the t
 ### How
 **So how am I going to make this a reality? In this next chapter I will outline the unique characteristics of print that help it stand out from its crowded digital counterparts.**
 
+![wood type blocks from uni](/assets/img/blog/type-blocks.jpg)
+
 ###### Size
 You control the size and resolution that your audience views your content. Interesting formats can be square, landscape or circular, the list goes on.
 
@@ -52,6 +54,8 @@ Sam's work cannot even begin to be feasibly transferred to a digital format. He 
 Looking at objects and situations for long enough, Sam starts to see them differently and tries to show this new angle in an original and captivating way.
 
 The [Church of London](http://tcolondon.com/) is a creative agency that work on a wide range of projects for clients around the world. They also publish two magazines, [Huck](http://www.huckmagazine.com/) and [Little White Lies](http://www.littlewhitelies.co.uk/), that “embody their passion for creating something of their own, and in doing so connect with other like-minded individuals.”
+
+![A few of my favourite publication](/assets/img/blog/magazine-stack.jpg)
 
 The two magazines are very carefully put together with curated content that is deliberate and of a high quality. Its for this reason that both magazines enjoy a small community based following that helps to maintain the magazines individual content. Both magazines aren’t purely design focused but are produced in such a way that appeals to the creative inclined. Its this shared ethos in design, film and sport that led me to keep going back to these publications and to take further interest in what TCOLondon produce.
 

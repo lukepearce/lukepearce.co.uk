@@ -129,12 +129,6 @@
 			border: none;
 			max-width: 100%;
 			vertical-align: middle;
-				@include break($lap-start) {
-					margin-bottom: $base-spacing-unit/2;
-				}
-				@include break($desk-start) {
-					margin-bottom: $base-spacing-unit;
-				}
 			}
 
 		.header {

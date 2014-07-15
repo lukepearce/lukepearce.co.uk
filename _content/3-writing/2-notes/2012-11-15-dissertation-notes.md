@@ -1,6 +1,10 @@
 ---
 title: Dissertation Notes
 ---
+I've got to decide on a dissertation topic before Christmas. Here are some of my initial notes and thoughts on what I'd like to write 5,000 words on.
+
+--
+
 ### Quotes
 > “Hold on, let me look that up. I just happen to have to sum of human knowledge in my pocket.”
 

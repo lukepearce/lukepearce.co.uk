@@ -3531,23 +3531,7 @@ img {
   vertical-align: middle;
 }
 
-@media only screen and (min-width: 35em) {
-  /* line 128, ../sass/_main.scss */
-
-  img {
-    margin-bottom: 12px;
-  }
-}
-
-@media only screen and (min-width: 50em) {
-  /* line 128, ../sass/_main.scss */
-
-  img {
-    margin-bottom: 24px;
-  }
-}
-
-/* line 140, ../sass/_main.scss */
+/* line 134, ../sass/_main.scss */
 
 .header {
   padding-bottom: 1em;

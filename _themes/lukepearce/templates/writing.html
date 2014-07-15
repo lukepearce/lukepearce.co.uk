@@ -1,5 +1,9 @@
 {{ theme:partial src="sub-nav" }}
 
+<div class="block-margin-double">
+  {{ if content }}{{ content|widont }}{{ /if }}
+</div>
+
 {{ entries:listing group_by_date="Y" }}
   {{ unless no_results }}
 
@@ -8,7 +12,9 @@
     {{ endif }}
 
     {{ if grouped_date }}
+    <div class="block-margin-half">
       <h6>{{ grouped_date }}</h6>
+    </div>
     {{ endif }}
 
     <div class="block-margin-half">

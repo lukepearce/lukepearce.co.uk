@@ -1,7 +1,7 @@
 ---
 title: Testing Checklist
 ---
-A testing checklist I wrote recently as part of our internal development guidelines.
+A testing checklist/front-end guide I wrote recently as part of our internal development guidelines.
 
 --
 
