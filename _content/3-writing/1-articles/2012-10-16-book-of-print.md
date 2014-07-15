@@ -5,7 +5,7 @@ I recently wrote a small book on my love of print as part of a university brief.
 
 --
 
-#### Why
+### Why
 
 Over the last year or two I have developed a greater interest in the workings and the productions of the print industry. It has led me to acquire a small collection of printed material raging from small independent zines to nationally wide distributed newspapers. Each new addition adds to the wealth of inspiration I have at my disposal.
 
@@ -15,7 +15,7 @@ This book talks about my love for print and if you don’t already share my pass
 
 I hope this book can be a piece of art in itself, something that will last the test of time, and be treasured by you, its reader like any other possession. Most importantly though, if transferred to a screen based device, my book will lose its meaning and purpose that I created it to have.
 
-#### How
+### How
 **So how am I going to make this a reality? In this next chapter I will outline the unique characteristics of print that help it stand out from its crowded digital counterparts.**
 
 ###### Size
@@ -43,7 +43,7 @@ Using steel cutting shapes to create bespoke forms can create interesting shapes
 These techniques make each page precious and different. they add something tactile that begs to be picked up and experienced.
 
 
-#### Creatives
+### Creatives
 
 Through his explorations of language [Sam Winston](http://www.samwinston.com/) creates sculpture, drawings and books that question our understanding of words, both as a carrier of messages and information itself.
 
@@ -56,7 +56,7 @@ The [Church of London](http://tcolondon.com/) is a creative agency that work on 
 The two magazines are very carefully put together with curated content that is deliberate and of a high quality. Its for this reason that both magazines enjoy a small community based following that helps to maintain the magazines individual content. Both magazines aren’t purely design focused but are produced in such a way that appeals to the creative inclined. Its this shared ethos in design, film and sport that led me to keep going back to these publications and to take further interest in what TCOLondon produce.
 
 
-#### Time out
+### Time out
 
 Sometimes I get sick of staring at a screen all day. My eyes tire and my head starts to ache. I look forward to detaching myself from the never ending feed that is my twitter account and a day of constantly checking and replying to emails. For a couple of hours a day I can unplug and relax, take time out and get lost in a good book or soak up some inspiration from a great design publication. Recently I have started to read print articles from start to finish giving print my undivided attention. Unlike when I read on a screen or mobile device, that is used to multitask, I tend to flick back and forth from application to application always leaving things halfway through. Print however, serves me with a beginning, middle and end and its this focused time with print that I love. The experience of turning each page over with great intrigue as to whats to come. Layouts that please my eye for white space and invite me to explore the pages content. The feeling of holding something, a physical entity that can keep me company on a journey and at the same time transport me to a different place.
 
@@ -67,7 +67,7 @@ Its not just in print where I enjoy the analogue over digital. I would never hav
 My interest in print has led me to start reading more and growing my knowledge on areas that can improve my design practice; broader design trends. To be a successful modern creative we have to start becoming part printer, part photographer, part coder, part editor and part illustrator. We should be aware of economic, cultural and technological shifts and emerging trends. Keeping abreast of these will in turn lead us to better design decisions.
 
 
-#### The future
+### The future
 
 **This chapter examines the roll of print in an ever increasing digital world. I have lifted these words from an article written by Craig Mod titled ‘Books in the age of the iPad’**
 

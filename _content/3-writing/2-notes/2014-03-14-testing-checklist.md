@@ -1,13 +1,17 @@
 ---
 title: Testing Checklist
 ---
+A testing checklist I wrote recently as part of our internal development guidelines.
+
+--
+
 This testing checklist is more of a guide to things you should be doing when launching a site. It has been written using a range of sources:
 
 - [Re-launching The Ultimate Website Launch Checklist](http://www.boxuk.com/blog/relaunching-the-ultimate-website-launch-checklist/)
 - [Website Launch Checklist: 25 Things to Test Before Your Site Goes Live](http://searchenginewatch.com/article/2287002/Website-Launch-Checklist-25-Things-to-Test-Before-Your-Site-Goes-Live)
 - [The Ultimate Testing Checklist](http://www.sitepoint.com/ultimate-testing-checklist/)
 
-#### SEO
+### SEO
 - Make sure that all page `<title>` tags are descriptive and the CMS is implemented so the user can change these.
 - Meta descriptions should also be included in the CMS.
 - Meta keywords are now irrelevant for new webpage and do not need to be added.
@@ -19,7 +23,7 @@ This testing checklist is more of a guide to things you should be doing when lau
 - If the site has a blog or news section include a link to the RSS feed in the head tag. (please see the Happy Giraffe front end toolkit for an example)
 - Ensure that headers are used correctly and only one `<h1>` exists on each page. For a solution to the styling of semantic headings please read the following blog post on [a modular approach to CSS typography](http://thesassway.com/advanced/modular-css-typography).
 
-#### Devices
+### Devices
 
 ###### Links to phone numbers and email address
 Check that these can be used to call the number on mobile devices and that email links open in an email client.
@@ -39,7 +43,7 @@ Things like carousels should be usable with touch interfaces for ease of use.
 ###### Links areas
 Any link element whether this be a button or image should be of a size large enough to be easily clickable when using a touch device. If in doubt, bigger is better!
 
-## General
+### General
 
 ###### Print stylesheet
 A print stylesheet should be utilized to give the user a stripped down content only version of the site. Common things to hide would be navigation/footer/header/quick links. For more info on creating a print stylesheet please read:
@@ -77,7 +81,7 @@ Ensure that the site search functions correctly, and that search results are acc
 - Check that the success message is clear and informative and wherever possible allows the user to carry on browsing the site from where they filled out the form. If this isn’t possible then make sure to include links to popular content.
 
 
-#### Accessibility
+### Accessibility
 
 ###### HTML
 Check all pages for small sites or a selection of pages for large sites against the [W3C HTML validation tester](http://validator.w3.org/). Wherever possible please ensure that all errors are resolved. If an error cannot be resolved then document why it errors and why it is acceptable for this to stop the page being compliant.
@@ -94,12 +98,12 @@ Browse the site in a text-only browser and using a screen reader. (find links) J
 ###### Javascript disabled
 Check that all of the sites content is accessible and readable with Javascript disabled. If there are certain components of the site that require JS to be enabled to function this needs to be documented and wherever possible an alternative solution should be implemented.
 
-#### Images
+###### Images
 - View the site without Images to make sure the key messages are still displayed. It is also paramount that the site can be navigated without the need for images. This can be done in Chrome by installing [Web Developer tools](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm) add-on (this is different from the native dev tools)
 - All contextual images should have alt tags that describe the image, they shouldn’t be duplicated or simply “image”.
 - All design only images, for instance ones used to accompany navigation, should not have alt tags so that text-only browsers and voice browser will ignore them.
 
-#### Performance
+### Performance
 Resources:
 [Yahoo Performance rules](http://developer.yahoo.com/performance/rules.html)
 

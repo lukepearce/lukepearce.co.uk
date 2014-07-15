@@ -1,7 +1,7 @@
 ---
 title: Dissertation Notes
 ---
-#### Quotes
+### Quotes
 > “Hold on, let me look that up. I just happen to have to sum of human knowledge in my pocket.”
 
 > I also find myself being more interested in hardware. I’m fascinated by the act of reading and where books might go next. What lives on with the things that we write and how do we get it into people’s hands in a meaningful way? The way we’re doing it now with iPads and Kindles doesn’t feel right. That’s not me lamenting for print books, but I think there should be a larger connection that we’re missing with words beneath glass.
@@ -10,14 +10,12 @@ title: Dissertation Notes
 > You get a lot of stuff you know won't commission in a million years. Printed material has to be pretty special for you to want to keep it. It only has value if it's lovely.
 <citeMark Reddy, Head or Art, Bartle Bogle Hegarty</cite>
 
-#### Working and unfinished titles
-Information Overload: the role of the designer in the digital age
+### Working and unfinished titles
+- Information Overload: the role of the designer in the digital age
+- Designing content for the digital era. A look towards a...
+- This dissertation will examine the evolution of information and content...
 
-designing content for the digital era. a look towards a...
-
-This dissertation will examine the evolution of information and content...
-
-#### Terms
+### Terms
 - mainstream publishers
 - niche publications
 - individuals
@@ -28,7 +26,7 @@ This dissertation will examine the evolution of information and content...
 - harmony - physical and digital worlds work together and compliment each other
 - printed materials
 
-#### Topics
+### Topics
 
 ###### Behaviour
 - speed
@@ -54,7 +52,7 @@ This dissertation will examine the evolution of information and content...
 - independent
 - filters
 
-#### Broad content
+### Broad content
 The deliverance of content is constantly changing and adapting. There are many reasons for these changes coming about. The advances in technology, the increasing cost of traditional print methods and the push towards a more affordable digital process. With an increase in technological advances with devices that allow content to be delivered has led to more content not even getting to print and instead delivered in a purely digital format. I want to look at how content is delivered and how we need to re-examine how we have adopted digital deliverance. I want to question why many have only directly transferred their printed content to digital and not really thought about how this transition changes the form of content and how it is interacted with.
 
 > Magazine apps on the iPad shouldn’t be a quick translation of a print, but something that can animate and navigate differently, surprise, delight and celebrate all the things tablets can do that print can’t.
@@ -62,23 +60,23 @@ The deliverance of content is constantly changing and adapting. There are many r
 
 I will look at certain products that have started to drive digital content such as the iPad and kindle.  
 
-#### Ultimate aim
+### Ultimate aim
 Examine and question the conventions of how we design content for the digital.
 Examine the transition of content from its physical form to the digital.
 
-#### Main objectives
+### Main objectives
 To question whether we need to re-examine the design of content when transferred from print to digital.
 Examine the rise of independent publications and how the print industry hasn't died but has changed. The big boys have left and moved to a purely digital sphere whereas there has been a huge rise in independent publications with a small print run. I will look at how these smaller printers and creating print with more meaning and care than before.
 
 
-#### (Possible) chapters
+### Possible chapters
 
 1. New form of content - design
 2. Rise of an art form - craft
 3. The web - content
 4. Print will never die - conclusion
 
-##### Designing for a new form of content
+###### Designing for a new form of content
 This chapter will begin by looking at old design practices within the print industry. I will explain how the form of the printed page governed the design. I will then question whether we should simply use these old design practices within our digital work or whether we should focus on developing new techniques and ways of solving design problems.
 
 > Nor do today’s media companies – not fully, not yet. Look at how they’re using the web and new platforms such as the tablet. They’re still attempting to replicate legacy forms, content, business models, industrial structures, and control: Old wine in new casks. Newspapers, magazines, and books all remain recognizable as such online.
@@ -111,9 +109,6 @@ Mark Weiser (1991 chief scientist Xerox PARC)
 
 > Technological revolutions have several interesting properties. First, we tend to overestimate the immediate impact and underestimate the long-term impact.Second, we tend to place the emphasis on the technologies themselves, when it is really the social impact and cultural change that will be most dramatic.
 Don Norman, drop everything you're doing
-
-
-
 
 ###### The content itself
 This chapter will explore the wide range of content being published whether it be online or in a physical form. I want to show people how the content we are printing is more considered and of a higher quality now that printing costs have risen.
